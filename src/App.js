@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Card from "./components/card/Card";
+import List from "./components/list/List";
 
 
 
@@ -8,6 +9,7 @@ import Card from "./components/card/Card";
 
 const App = () => {
   const [musicNumber, setMusicNumber] = useState(0);
+  const [open, setOpen] = useState(false);
 
 
 return(
@@ -16,7 +18,8 @@ return(
     <div className="shape shape-2"></div>
     <div className="shape shape-3"></div>
     <main>
-      <Card props={{musicNumber, setMusicNumber}} />
+      <Card props={{musicNumber, setMusicNumber, setOpen}} />
+      <List props={{open, setOpen, musicNumber, setMusicNumber}} />
     </main>
   </div>
 )
